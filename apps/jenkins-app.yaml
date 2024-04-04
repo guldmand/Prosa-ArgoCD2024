@@ -1,0 +1,12 @@
+project: default
+source:
+  repoURL: 'https://github.com/guldmand/Prosa-ArgoCD2024'
+  path: apps
+  targetRevision: HEAD
+destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: student-6
+syncPolicy:
+  automated:
+    prune: true
+    selfHeal: true
